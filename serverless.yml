@@ -1,14 +1,13 @@
-org: sebastiangallegosm
+org: geraldocolchado
 service: api-pelicula
 
 provider:
   name: aws
-  runtime: python3.12	
-  # Default memory size for functions (default: 1024MB)
+  runtime: python3.12
   memorySize: 1024
   timeout: 30
   iam:
-    role: arn:aws:iam::257308033301:role/LabRole	
+    role: arn:aws:iam::257308033301:role/LabRole
   environment:
     TABLE_NAME: ${sls:stage}-t_peliculas
 
